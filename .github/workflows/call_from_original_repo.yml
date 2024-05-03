@@ -1,0 +1,12 @@
+name: Call from original Repo
+on:
+ workflow_dispatch
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        uses: kg-238/ActionsFundamentals@v1
+        with:
+          who-to-greet: '@octocat'
