@@ -10,3 +10,6 @@ jobs:
         uses: kg-238/hello-world-docker-action@v1
         with:
           who-to-greet: '@octocat'
+          
+      - name: Output time set in the container
+        run: echo "The time was ${{ steps.hello-action.outputs.time }} when the action said hello"
